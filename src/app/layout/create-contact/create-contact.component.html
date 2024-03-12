@@ -1,0 +1,19 @@
+<h1>Create Contact</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">First name:</label>
+  <input id="first-name" type="text" name="firstName" formControlName="firstName" />
+
+  <label for="last-name">Last name:</label>
+  <input id="last-name" type="text" name="lastName" formControlName="lastName" />
+
+  <label for="street">Street:</label>
+  <input id="street" type="text" name="street" formControlName="street" />
+
+  <label for="city">City:</label>
+  <input id="city" type="text" name="city" formControlName="city" />
+
+  <div class="actions">
+    <div class="spacer"></div>
+    <button type="submit" [disabled]="contactForm.invalid">Create</button>
+  </div>
+</form>
